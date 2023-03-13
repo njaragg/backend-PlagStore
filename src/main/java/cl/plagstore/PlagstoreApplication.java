@@ -13,6 +13,7 @@ public class PlagstoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PlagstoreApplication.class, args);
 	}
+	
 	@Bean
 	public TomcatServletWebServerFactory servletContainer() {
 		TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
