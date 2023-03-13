@@ -28,7 +28,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Sale {
 	
-	//atributos
+	//******  ATRIBUTOS  *****
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,10 +38,9 @@ public class Sale {
     
     private Integer status;
     
-    //relaciones
+    //******  RELACIONES  *****
     
     //relacion con tabla clients, muchos a 1 
-     
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "client_id") 
     private Client client;

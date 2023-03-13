@@ -23,7 +23,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Client {
-     
+	
+	//******  ATRIBUTOS  *****
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,6 +32,9 @@ public class Client {
     private String name;
     
     private String rut;
+    
+    //******  RELACIONES  *****
+    // Relacion uno a muchos con tabla sales
     @JsonIgnore
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Sale> sales;

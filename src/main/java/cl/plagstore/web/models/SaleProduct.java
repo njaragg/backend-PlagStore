@@ -22,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class SaleProduct {
     
-	//atributos
+	//******  ATRIBUTOS  *****
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +30,7 @@ public class SaleProduct {
 
     private Integer quantity;
     
-    //relaciones
+    //******  RELACIONES  *****
     
     //relacion con tabla SALES, muchos a uno
     @ManyToOne(fetch = FetchType.LAZY)

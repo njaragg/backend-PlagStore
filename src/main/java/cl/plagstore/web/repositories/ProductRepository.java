@@ -15,7 +15,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     		+ "left join products p ON sp.product_id =p.id "
     		+ "left join categories c on p.category_id =c.id "
     		+ "left join sales s ON sp.sale_id = s.id "
-    		+ "WHERE s.status = 0 or s.status = 1 "
+    		+ "WHERE s.status = 0 "
     		+ "GROUP BY p.id "
     		+ "ORDER by cantidad DESC;", nativeQuery = true)
     List<Object[]> obtenerProductoMasVendidoDesc();

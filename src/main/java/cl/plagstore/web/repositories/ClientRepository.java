@@ -23,6 +23,7 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
 			+ "left join sales s ON c.id = s.client_id "
 			+ "left join sales_products sp on s.id = sp.sale_id "
 			+ "left join products p on sp.product_id = p.id "
+			+ "WHERE s.status = 0 "
 			+ "GROUP BY c.name "
 			+ "order by PromedioDeVentas asc;")
 	ArrayList<Object[]> promedioVentasPorCliente();
